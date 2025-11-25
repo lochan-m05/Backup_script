@@ -16,7 +16,7 @@ fi
 
 current_date=$(date %Y-%m-%d)
 
-rsync_option="-avb --backup-dir $2/$current_date --delete --dry-run"
+rsync_option="-avb --backup-dir $2/$current_date --delete --dry-run" #remove dry run in prduction unit 
 $(which rsync) $rsync_option $1 $2/current >> backup_$current_date.log
 
 
